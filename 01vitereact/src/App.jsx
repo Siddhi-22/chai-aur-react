@@ -8,7 +8,7 @@ function App() {
     <>
     <Chai />
     
-    <h4>Get your Chai | {user_name}</h4>
+    <h4>Get your Chai | {user_name}</h4> //{username} is evaluated expression
     </>
     
   )

@@ -10,3 +10,4 @@ root.render(
   </React.StrictMode>
 );
 
+// If the <React.StrictMode> is removed then its called "Safe Mode".

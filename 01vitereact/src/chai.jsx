@@ -5,3 +5,6 @@ function Chai() {
 }
 
 export default Chai;
+
+// remember only one element can be exported i.e one html tag
+// so fragments came into scene
