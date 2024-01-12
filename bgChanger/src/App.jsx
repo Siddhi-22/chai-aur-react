@@ -1,32 +1,17 @@
-import { useState } from "react";
-import "./assets/style.css";
+import React from 'react';
+import { useState } from 'react';
 
-function App() {
-
-  const [color, setColor] = useState("lightblue");
+const App = () => {
+  
+  const [color, setColor] = useState('green');
 
   return (
-    <div className="page"> 
-      <div className="btn">Test
-        <div classNam="btn">
-          <button className="btn" onClick={() => setColor("red")} style={{backgroundColor: "red"}}>Red
-          </button>
-          <button className="btn" onClick={() => setColor("green")} style={{backgroundColor: "green"}}>Green
-          </button>
-          <button className="btn" onClick={() => setColor("blue")} style={{backgroundColor: "blue"}}>Blue
-          </button>
-          <button className="btn" onClick={() => setColor("pink")} style={{backgroundColor: "pink"}}>Pink
-          </button>
-          <button className="btn" onClick={() => setColor("olive")} style={{backgroundColor: "olive"}}>Olive
-          </button>
-          <button className="btn" onClick={() => setColor("lavender")} style={{backgroundColor: "lavender"}}>Lavender
-          </button>
-          <button className="btn" onClick={() => setColor("cyan")} style={{backgroundColor: "cyan"}}>Cyan
-          </button>
-        </div>
+    <div className='w-full h-screen duration-200'style={{backgroundColor:color}}>
+      <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
+        <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-xl'>Test</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

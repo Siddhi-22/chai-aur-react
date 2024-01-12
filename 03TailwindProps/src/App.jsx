@@ -13,7 +13,7 @@ function App() {
   let arr = [1, 2, 3, 4];
   return (
     <>
-      <h1 className='bg-green-400 text-black p-4 rounded-lg text-lg mb-5'>TailWind Test</h1>
+      <h1 className='bg-blue-400 text-black p-4 rounded-lg text-lg mb-5'>TailWind Test</h1>
       <Card title="React-hindi" />    
     </>
     

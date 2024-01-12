@@ -17,7 +17,7 @@ function Card({title, btntxt="Visit Me"}) {
       debitis?
     </p>
     <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-      {btntxt} →
+      {btntxt='Profile'} →
     </button>
   </div>
 </div>

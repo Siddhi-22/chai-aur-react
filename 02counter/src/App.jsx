@@ -8,7 +8,11 @@ function App() {
   const addValue = () => {
 
     if (counter < 20) {
-      return setCounter(counter + 1)  
+      setCounter(counter + 1)
+      //  setCounter(prevCounter => prevCounter + 1)
+      //  setCounter(prevCounter => prevCounter + 1)
+      //  setCounter(prevCounter => prevCounter + 1)
+         
     }
     else if(counter > 20){
       return setCounter(20)
