@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const App = () => {
   
   // List of image filenames in the public folder
-  const images = ['01.jpg', '02.jpg', '03.jpg'];
+  const images = ['01.jpg', '02.jpg', '03.jpg', '04.jpg'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
