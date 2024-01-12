@@ -1,57 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  
+  // List of image filenames in the public folder
+  const images = ['01.jpg', '02.jpg', '03.jpg'];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const backgroundImageStyle = {
+    backgroundImage: `url(public/${images[currentImageIndex]})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    width: '100vw',
+    minHeight: '100vh', // Set the minimum height to cover the entire viewport
+  };
 
   return (
-    <>
+    <div style={backgroundImageStyle}>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Your Content Goes Here</h1>
+        <button onClick={nextImage}>Change Background</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
-
-
-
-
-
-// const [color, setColor] = useState('green');
-
-//   return (
-//     <div className='page w-full h-screen duration-200'style={{backgroundColor:color}}>
-//       <div className='page1 fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
-//         <div className='page2 flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-xl'>
-//           <button onClick={() => setColor('red')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "red"}}>Red</button>
-//           <button onClick={() => setColor('blue')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "blue"}}>Blue</button>
-//           <button onClick={() => setColor('yellow')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "yellow"}}>Yellow</button>
-//           <button onClick={() => setColor('lavender')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "lavender"}}>Lavender</button>
-//           <button onClick={() => setColor('olive')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "olive"}}>Olive</button>
-//           <button onClick={() => setColor('black')} className='btn outline-none px-4 py-1 rounded-full text-white shadow-sm' style={{backgroundColor: "black"}}>Black</button>
-//           <button onClick={() => setColor('brown')} className='btn outline-none px-4 py-1 rounded-full text-whte shadow-sm' style={{backgroundColor: "brown"}}>Brown</button>
-//         </div>
-//       </div> 
-//     </div>
-  
+export default App;
