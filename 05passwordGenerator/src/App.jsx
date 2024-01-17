@@ -14,15 +14,15 @@ function App() {
 
   const passwordGenerator = useCallback(() => {
 
-    let pass =""
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    let pass ="";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     
-    if(numAllowed) str += "0123456789"
-    if(charAllowed) str += "!@#$%^&*(){}<>?/|~`"
+    if(numAllowed) str += "0123456789";
+    if(charAllowed) str += "!@#$%^&*(){}<>?/|~`";
 
     for(let i = 1; i <= length; i++){
-      let char = Math.floor(Math.random() * str.length + 1)
-      pass += str.charAt(char)
+      let char = Math.floor(Math.random() * str.length + 1);
+      pass += str.charAt(char);
     }
     
     setPassword(pass);
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(()=> {
     passwordGenerator()
-  }, [length, numAllowed, charAllowed, setPassword]);
+  }, [length, numAllowed, charAllowed, passwordGenerator]);
 
 
 
