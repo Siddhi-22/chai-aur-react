@@ -1,0 +1,13 @@
+Context:
+------------
+When the data(props) required to a certain component is handled by each layer of their parent component
+Here we manage the states in many unwanted components as well
+
+
+steps:
+-----------
+- Create a Context variable(Here UserContext.js)
+    As we created this (global)context, it will provide a ContextProvider.
+    This Provider will be used as a wrapper to all the components.
+    All the components wrapped in will get the access of the global context.
+- 
