@@ -7,6 +7,8 @@ function App() {
   return (
     <>
     <Chai />
+    console.log(<Chai />);
+    
     
     <h4>Get your Chai | {user_name}</h4> //{username} is evaluated expression
     </>
